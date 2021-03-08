@@ -5,7 +5,7 @@ build:
 	docker build -t $(USERNAME)/greeter:$(TAG) .
 
 run:
-	docker run --rm -p 5000:5000 $(USERNAME)/greeter
+	docker run --rm -p 5000:5000 $(USERNAME)/greeter:$(TAG)
 
 push: build
 	docker login -u $(USERNAME)
